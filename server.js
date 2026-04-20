@@ -10,17 +10,23 @@ app.use(express.urlencoded({extended: true}));
 
 //2: sesion ga bogliq codlar
 
+
 //3: view ga bogliq codlar
 app.set("views", "views");
 app.set("view engine","ejs");
 
-//4: routing ga bogliq codlar
-app.get("/hello", function (req, res){
-    res.end("<h1>hello world by Sanjar</h1>");
+//4: routing ga bogliq codlar (frontend qismi)
+app.post("/create-item", (req, res ) => {
+   console.log(req. body);
+   res.json({savatga: "solindi"});
 });
-app.get("/gift", function (req, res){
-    res.end("<h1>siz sovgalar bolimidasiz</h1>");
+
+app.get("/", function(req, res) {
+   res.render("harid");
 });
+
+
+
 
 const server = http.createServer(app);
 let PORT = 3000;
