@@ -16,7 +16,8 @@ fs.readFile("database/user.json","utf8",(err, data) =>{
 
 
 //1: kirish ga bogliq codlar
-app.use(express.static("public"));
+app.use(express.static("public")); // bu barcha kirib kela yotgan request larga 
+//ochiq bolishi uchun public deb set qildik
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
@@ -24,8 +25,9 @@ app.use(express.urlencoded({extended: true}));
 
 
 //3: view ga bogliq codlar
-app.set("views", "views");
-app.set("view engine","ejs");
+app.set("views", "views"); // frondet uchun kerak boladigan file larni shu view 
+// folder ichidan topsan degan buyruq
+app.set("view engine","ejs"); // 
 
 //4: routing ga bogliq codlar (frontend qismi)
 app.post("/create-item", (req, res ) => {
@@ -34,12 +36,13 @@ app.post("/create-item", (req, res ) => {
 
 app.get('/author',(req, res) => {
     res.render("author", {user: user});
-})
+});
 
 
 app.get("/", function(req, res) {
    res.render("harid");
 });
+
 
 
 

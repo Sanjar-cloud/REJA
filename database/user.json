@@ -1,1 +1,23 @@
-[]
+
+{
+  "name": "Sanjarbek",
+  "profession": "Software Engineer",
+  "age": 25,
+  "residence": "S.Korea",
+  "freelance": "Available",
+  "adress": "S.Korea, Seoul",
+  "languages": ["Uzbek", "Korean", "English"],
+  "skills": ["Html", "Css", "Js", "NodeJS"],
+  "extra_skills": ["Bootstrap", "Materiliza", "styling", "Sass", "Django", "Flask", "GIT Knowledge"],
+  "work_place": "IT Company",
+  "service_desc": "I create modern websites and web applications using Frontend and Backend technologies. I build fast, clean, and user-friendly sites for clients.",
+  "about_me": "My name is Sanjarbek, a young developer passionate about programming. Currently learning Node.js, Express, and JavaScript. I enjoy learning something new every day.",
+  "city": "seoul",
+  "my services": "I build modern and responsive websites using the latest web technologies. From frontend design to backend development, I deliver clean and efficient solutions.",
+  "title": ["Flower", "Seedlings", "Gardner", "Old", "New"],
+  "flower_desc": ["What is a Flower?", "What is a Seedling?", "Who is Gardner?"],
+  "flower_name": ["Tulip", "Daffodil", "Poppy", "Sunflower", "Rose"],
+  "flower_price": ["15$", "25$", "12$", "20$", "35$"],
+  "famous_words": ["World is Beautiful with Flowers"],
+  "famous_name": ["Steve Jobs"]
+}
