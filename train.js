@@ -106,4 +106,4 @@ function countLetter(harf, soz) {
   return son;
 }
 
-console.log(countLetter("u", "burgut")); // 2 ta u bor
+console.log(countLetter("a", "lalalalalalala")); // 2 ta u bor
