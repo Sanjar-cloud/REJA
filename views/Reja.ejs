@@ -11,7 +11,6 @@
           crossorigin="anonymous">
     </head>
 
-    </head>
     <body style="background-color: #b8bbb1;">
        <div class="container">
           <h1 class="display-4 text-center py-1">Reja va maqsadlar</h1>  
@@ -22,7 +21,7 @@
               <div class="d-flex align-items-center">
                 <input
                    id="create-field"
-                   name="item"
+                   name="reja"
                    autofocus
                    autocomplete="off"
                    class="form-control mr-3"
@@ -36,7 +35,29 @@
             </form>
           </div> 
 
-          <button class="btn btn-primary class="border-radius 20px">
+
+          
+
+          <ul id="item-list" class="list-group pb-5">
+              <% items.map(function(item) { %>
+                  <li class="list-group-item list-group-item-info d-flex align-items-center justify-content-between">
+              <span class="item-text"><%=item.reja%></span>
+              <div>
+                  <button data-id="<%=item._id%>" class="edit-me btn btn-secondary btn-sm mr-1"> 
+                    ozgarish
+                  </button>
+                  <button data-id="<%=item._id%>"  class="delete-me btn btn-danger btn-sm">0chirish</button>
+
+              </div>
+            </li>
+             <% }) %>
+          </ul>
+           
+        
+
+
+
+          <button>
             hamma rejalarni ochirish 
           </button>
           

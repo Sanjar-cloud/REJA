@@ -2,17 +2,17 @@ console.log("web serverni boshlash Bismillah");
 const express = require("express");
 const res = require("express/lib/response");
 const app = express();
-const fs = require("fs");
+// const fs = require("fs");
 
 
-let user;
-fs.readFile("database/user.json","utf8",(err, data) =>{
-   if(err) {
-      console.log("ERROR:", err);
-   } else {
-      user = JSON.parse(data)
-   }
-});
+// let user;
+// fs.readFile("database/user.json","utf8",(err, data) =>{
+//    if(err) {
+//       console.log("ERROR:", err);
+//    } else {
+//       user = JSON.parse(data)
+//    }
+// });
 
 
 //mongodb chaqirish 
@@ -35,16 +35,34 @@ app.set("view engine","ejs"); //
 
 //4: routing ga bogliq codlar (frontend qismi)
 app.post("/create-item", (req, res ) => {
+   console.log(req.body);
+   const new_reja = req.body.reja;
+   db.collection("plans").insertOne({reja: new_reja}, (err, data) => {
+      if(err) {
+         console.log(err);
+         res.end('something went wrong');
+      }else {
+         res.end("successfully added");
+      }
+   }); 
    
 });
 
-app.get('/author',(req, res) => {
-    res.render("author", {user: user});
-});
+// app.get('/author',(req, res) => {
+//     res.render("author", {user: user});
+// });
 
 
 app.get("/", function(req, res) {
-   res.render("Reja");
+   db.collection("plans").find().toArray((err, data) => {
+      if (err) {
+            console.log(err);
+            res.end("something went wrong");
+      } else {
+         console.log(data);
+         res.render("Reja", {items: data});
+      }
+   });
 });
 
 
