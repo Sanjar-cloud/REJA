@@ -2,21 +2,10 @@ console.log("web serverni boshlash Bismillah");
 const express = require("express");
 const res = require("express/lib/response");
 const app = express();
-// const fs = require("fs");
 
-
-// let user;
-// fs.readFile("database/user.json","utf8",(err, data) =>{
-//    if(err) {
-//       console.log("ERROR:", err);
-//    } else {
-//       user = JSON.parse(data)
-//    }
-// });
 
 
 //mongodb chaqirish 
-
 const db = require("./server").db();
 
 //1: kirish ga bogliq codlar
@@ -42,7 +31,7 @@ app.post("/create-item", (req, res ) => {
          console.log(err);
          res.end('something went wrong');
       }else {
-         res.end("successfully added");
+         res.end("savatga qoshildi");
       }
    }); 
    

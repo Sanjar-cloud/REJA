@@ -94,16 +94,30 @@
 //mitask
 
 
-function countLetter(harf, soz) {
-  let son = 0;
+// function countLetter(harf, soz) {
+//   let son = 0;
 
-  for (let i = 0; i < soz.length; i++) {
-    if (soz[i] === harf) {
-      son++;
+//   for (let i = 0; i < soz.length; i++) {
+//     if (soz[i] === harf) {
+//       son++;
+//     }
+//   }
+
+//   return son;
+// }
+
+// console.log(countLetter("a", "lalalalalalala")); // 2 ta u 
+
+
+//B-task
+
+function countDigits(soz) {
+  let count = 0;
+  for (let letter of soz) {
+    if (letter >= 0) {
+      count++;
     }
   }
-
-  return son;
+  console.log(`Ushbu string ichidan ${count} dona raqamlar topildi`);
 }
-
-console.log(countLetter("a", "lalalalalalala")); // 2 ta u bor
+countDigits("ad2a54y79wet0sfgb900755213");
