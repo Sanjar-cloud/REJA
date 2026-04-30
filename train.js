@@ -1,12 +1,12 @@
-// console.log("Jack ma maslahatlari");
-// const list = [
-//     "yaxshi talaba boling", //0-20
-//     "togri boshliq tanlang va koproq hato qiling", //20-30
-//     "ozingizga ishlashni boshlang", //30-40
-//     "siz kuchli bolgan narsalarni qiling ", //40-50
-//     "yoshlarga investitsiya qiling", //50-60
-//     "endi dam oling", //60
-//  ];
+console.log("Jack ma maslahatlari");
+const list = [
+    "yaxshi talaba boling", //0-20
+    "togri boshliq tanlang va koproq hato qiling", //20-30
+    "ozingizga ishlashni boshlang", //30-40
+    "siz kuchli bolgan narsalarni qiling ", //40-50
+    "yoshlarga investitsiya qiling", //50-60
+    "endi dam oling", //60
+ ];
 
  //callbakc function x  
 
@@ -41,36 +41,37 @@
 //asychronous functions 
 
 
-// async function maslahatBering(a) {
-//     if (typeof a !== "number") throw new Error ("inseert a number");
-//     else if (a <= 20) return list[0];
-//     else if (a > 20 && a <= 30) return list[1];
-//     else if (a > 30 && a <= 40) return list[2];
-//     else if (a > 40 && a <= 50) return list[3];
-//     else if (a > 50 && a <= 60) return list[4];
-//     else {
-//         return new Promise ((resolve, reject) => {
-//             setTimeout(() => {
-//                  resolve(list[5]);
 
-//             }, 5000)
-//         })
-//     }
+async function maslahatBering(a) {
+    if (typeof a !== "number") throw new Error ("inseert a number");
+    else if (a <= 20) return list[0];
+    else if (a > 20 && a <= 30) return list[1];
+    else if (a > 30 && a <= 40) return list[2];
+    else if (a > 40 && a <= 50) return list[3];
+    else if (a > 50 && a <= 60) return list[4];
+    else {
+        return new Promise ((resolve, reject) => {
+            setInterval(() => {
+                 resolve(list[5]);
+
+            }, 5000)
+        })
+    }
         
-//  };
+ };
 
 //asynchronous then/ catch 
 //call via ( call qilish then/catch. orqali)
 
-// console.log("passed here o");
-//  maslahatBering(77) 
-//  .then( (data) =>{
-//     console.log("javob:", data);
-//  })
-//  .catch((err) => {
-//     console.log("ERROR:", err);
-//  });
-//  console.log("passed here o");
+console.log("passed here o");
+ maslahatBering(77) 
+ .then( (data) =>{
+    console.log("javob:", data);
+ })
+ .catch((err) => {
+    console.log("ERROR:", err);
+ });
+ console.log("passed here 1");
 
 
 
@@ -106,18 +107,23 @@
 //   return son;
 // }
 
-// console.log(countLetter("a", "lalalalalalala")); // 2 ta u 
+// console.log(countLetter("a", "lalalalalalala")); // 
 
 
 //B-task
 
-function countDigits(soz) {
-  let count = 0;
-  for (let letter of soz) {
-    if (letter >= 0) {
-      count++;
-    }
-  }
-  console.log(`Ushbu string ichidan ${count} dona raqamlar topildi`);
-}
-countDigits("ad2a54y79wet0sfgb900755213");
+// tepada xariflar topish uchun (countLetrer/functiondan foydalangan edik ) (raqamlar miqdorini topish uchun countNum dan foydalanamiz)
+// function countDigits(soz) { 
+//   let count = 0;
+//   for (let letter of soz) {
+//     if (letter >= 0) {
+//       count++;
+//     }
+//   }
+//   console.log(`Ushbu string ichidan ${count} dona raqamlar topildi`);
+// }
+// countDigits("ad2a54y79wet0sfgb900755213");
+
+
+
+
