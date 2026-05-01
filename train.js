@@ -1,12 +1,12 @@
-console.log("Jack ma maslahatlari");
-const list = [
-    "yaxshi talaba boling", //0-20
-    "togri boshliq tanlang va koproq hato qiling", //20-30
-    "ozingizga ishlashni boshlang", //30-40
-    "siz kuchli bolgan narsalarni qiling ", //40-50
-    "yoshlarga investitsiya qiling", //50-60
-    "endi dam oling", //60
- ];
+// console.log("Jack ma maslahatlari");
+// const list = [
+//     "yaxshi talaba boling", //0-20
+//     "togri boshliq tanlang va koproq hato qiling", //20-30
+//     "ozingizga ishlashni boshlang", //30-40
+//     "siz kuchli bolgan narsalarni qiling ", //40-50
+//     "yoshlarga investitsiya qiling", //50-60
+//     "endi dam oling", //60
+//  ];
 
  //callbakc function x  
 
@@ -42,36 +42,36 @@ const list = [
 
 
 
-async function maslahatBering(a) {
-    if (typeof a !== "number") throw new Error ("inseert a number");
-    else if (a <= 20) return list[0];
-    else if (a > 20 && a <= 30) return list[1];
-    else if (a > 30 && a <= 40) return list[2];
-    else if (a > 40 && a <= 50) return list[3];
-    else if (a > 50 && a <= 60) return list[4];
-    else {
-        return new Promise ((resolve, reject) => {
-            setInterval(() => {
-                 resolve(list[5]);
+// async function maslahatBering(a) {
+//     if (typeof a !== "number") throw new Error ("inseert a number");
+//     else if (a <= 20) return list[0];
+//     else if (a > 20 && a <= 30) return list[1];
+//     else if (a > 30 && a <= 40) return list[2];
+//     else if (a > 40 && a <= 50) return list[3];
+//     else if (a > 50 && a <= 60) return list[4];
+//     else {
+//         return new Promise ((resolve, reject) => {
+//             setInterval(() => {
+//                  resolve(list[5]);
 
-            }, 5000)
-        })
-    }
+//             }, 5000)
+//         })
+//     }
         
- };
+//  };
 
 //asynchronous then/ catch 
 //call via ( call qilish then/catch. orqali)
 
-console.log("passed here o");
- maslahatBering(77) 
- .then( (data) =>{
-    console.log("javob:", data);
- })
- .catch((err) => {
-    console.log("ERROR:", err);
- });
- console.log("passed here 1");
+// console.log("passed here o");
+//  maslahatBering(77) 
+//  .then( (data) =>{
+//     console.log("javob:", data);
+//  })
+//  .catch((err) => {
+//     console.log("ERROR:", err);
+//  });
+//  console.log("passed here 1");
 
 
 
@@ -123,6 +123,24 @@ console.log("passed here o");
 //   console.log(`Ushbu string ichidan ${count} dona raqamlar topildi`);
 // }
 // countDigits("ad2a54y79wet0sfgb900755213");
+
+
+
+
+
+//MIT task-c
+
+
+
+function count(soz1,soz2) {
+  const new_soz = soz1.split("");
+  if (soz1.length == soz2.length) {
+    return new_soz.every((x) => soz2.includes(x));
+  } else {
+    return "Harflar soni teng emas";
+  }
+}
+console.log(count("mitgroup", "gmtiprou"));
 
 
 

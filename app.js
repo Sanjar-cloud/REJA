@@ -7,6 +7,7 @@ const app = express();
 
 //mongodb chaqirish 
 const db = require("./server").db();
+const mongodb = require("mongodb");
 
 //1: kirish ga bogliq codlar
 app.use(express.static("public")); // bu barcha kirib kela yotgan request larga 
@@ -36,6 +37,13 @@ app.post("/create-item", (req, res ) => {
 // app.get('/author',(req, res) => {
 //     res.render("author", {user: user});
 // });
+
+app.post("/delete-item", (req, res) => {
+const id = req.body.id;
+db.collection("plans").deleteOne({_id: new mongodb.ObjectId(id)},    function(err, data) {
+   res.json({state: "success"});
+}) 
+});
 
 
 app.get("/", function(req, res) {
