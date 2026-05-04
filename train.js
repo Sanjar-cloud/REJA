@@ -131,17 +131,81 @@
 //MIT task-c
 
 
+// 1- xolatda yechish usuli
+// function count(soz1,soz2) {
+//   const new_soz = soz1.split("");
+//   if (soz1.length == soz2.length) {
+//     return new_soz.every((x) => soz2.includes(x));
+//   } else {
+//     return "Harflar soni teng emas";
+//   }
+// }
+// console.log(count("mitgroup", "gmtiprou"));
 
-function count(soz1,soz2) {
-  const new_soz = soz1.split("");
-  if (soz1.length == soz2.length) {
-    return new_soz.every((x) => soz2.includes(x));
-  } else {
-    return "Harflar soni teng emas";
-  }
+
+//2- xolatda yechish suli
+// function count(soz1, soz2) {
+//  if (soz1.length !== soz2.length) {
+//    return "Harflar soni teng emas";
+//  }
+ 
+//  for (let i = 0; i < soz1.length; i++) {
+//    if (!soz2.includes(soz1[i])) {
+//      return false;
+//    }
+//  }
+ 
+//  return true;
+// }
+
+// console.log(count("nimagap", "nmagap")); 
+
+//3- xolatda yechish suli
+// function count(soz1, soz2) {
+//  if (soz1.length !== soz2.length) {
+//    return "Harflar soni teng emas";
+//  }
+ 
+//  const sort1 = soz1.split("").sort().join("");
+//  const sort2 = soz2.split("").sort().join("");
+ 
+//  return sort1 === sort2;
+// }
+
+// console.log(count("mitgroup", "gmtiprou")); // true
+
+
+
+
+//d-task
+
+class Shop {
+   constructor(non, lagmon, cola) {
+       this.non = non;
+       this.lagmon = lagmon;
+       this.cola = cola;
+   }
+
+   qoldiq() {
+       const vaqt = new Date().toLocaleTimeString();
+       console.log(`Hozir ${vaqt}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud!`);
+   }
+
+   sotish(mahsulot, miqdor) {
+       this[mahsulot] = this[mahsulot] - miqdor;
+       console.log(`${miqdor}ta ${mahsulot} sotildi`);
+   }
+
+   qabul(mahsulot, miqdor) {
+       this[mahsulot] = this[mahsulot] + miqdor;
+       console.log(`${miqdor}ta ${mahsulot} qabul qilindi`);
+   }
 }
-console.log(count("mitgroup", "gmtiprou"));
 
+// Ishlatish
+const shop = new Shop(4, 5, 2);
 
-
-
+shop.qoldiq();
+shop.sotish("non", 3);
+shop.qabul("cola", 4);
+shop.qoldiq();
