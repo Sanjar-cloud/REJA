@@ -92,7 +92,7 @@
 
 
 
-//mitask
+//mitask bzi qiymat qilib kiritkan xarf nehta ekanligini bilish 
 
 
 // function countLetter(harf, soz) {
@@ -128,7 +128,7 @@
 
 
 
-//MIT task-c
+//MIT task-c 2ta argument beramiz misol ("mitgroup", "gmtiprou")  xarif va raqamlar sonlar teng yoki teng eamsligini bilish 
 
 
 // 1- xolatda yechish usuli
@@ -179,33 +179,44 @@
 
 //d-task
 
-class Shop {
-   constructor(non, lagmon, cola) {
-       this.non = non;
-       this.lagmon = lagmon;
-       this.cola = cola;
-   }
+// class Shop {
+//    constructor(non, lagmon, cola) {
+//        this.non = non;
+//        this.lagmon = lagmon;
+//        this.cola = cola;
+//    }
 
-   qoldiq() {
-       const vaqt = new Date().toLocaleTimeString();
-       console.log(`Hozir ${vaqt}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud!`);
-   }
+//    qoldiq() {
+//        const vaqt = new Date().toLocaleTimeString();
+//        console.log(`Hozir ${vaqt}da ${this.non}ta non, ${this.lagmon}ta lagmon va ${this.cola}ta cola mavjud!`);
+//    }
 
-   sotish(mahsulot, miqdor) {
-       this[mahsulot] = this[mahsulot] - miqdor;
-       console.log(`${miqdor}ta ${mahsulot} sotildi`);
-   }
+//    sotish(mahsulot, miqdor) {
+//        this[mahsulot] = this[mahsulot] - miqdor;
+//        console.log(`${miqdor}ta ${mahsulot} sotildi`);
+//    }
 
-   qabul(mahsulot, miqdor) {
-       this[mahsulot] = this[mahsulot] + miqdor;
-       console.log(`${miqdor}ta ${mahsulot} qabul qilindi`);
-   }
+//    qabul(mahsulot, miqdor) {
+//        this[mahsulot] = this[mahsulot] + miqdor;
+//        console.log(`${miqdor}ta ${mahsulot} qabul qilindi`);
+//    }
+// }
+
+// // Ishlatish
+// const shop = new Shop(4, 5, 2);
+
+// shop.qoldiq();
+// shop.sotish("non", 4);
+// shop.sotish("lagmon", 3);
+// shop.sotish("cola", 3);
+// shop.qabul("cola", 4);
+// shop.qoldiq();
+
+
+
+
+function getReverse(hello) {
+  return hello.split("").reverse().join("")
 }
 
-// Ishlatish
-const shop = new Shop(4, 5, 2);
-
-shop.qoldiq();
-shop.sotish("non", 3);
-shop.qabul("cola", 4);
-shop.qoldiq();
+console.log(getReverse("hello"))
