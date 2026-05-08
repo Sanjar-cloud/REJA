@@ -213,10 +213,36 @@
 // shop.qoldiq();
 
 
+// e task 
+
+// function getReverse(sanjar) {
+//   return sanjar.split("").reverse().join("")
+// }
+
+// console.log(getReverse("sanjar"))
+
+// function kattasi(a, b ) {
+//     if(a < b ){
+//         return b
+//     } else {
+//         return a 
+//     }
+// }
+
+// console.log(kattasi(3, 7))  // 7
+// console.log(kattasi(10, 4)) // 10
 
 
-function getReverse(hello) {
-  return hello.split("").reverse().join("")
+
+///task - F 
+
+
+function findDoublers(a=string) {
+  const arr = a.split("")
+  return arr.some(ele => {
+    return arr.filter(harf => harf === ele).length > 1
+  })
 }
 
-console.log(getReverse("hello"))
+console.log(findDoublers("hello")) // true qaytaradi 
+
