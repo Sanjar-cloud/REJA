@@ -237,12 +237,32 @@
 ///task - F 
 
 
-function findDoublers(a=string) {
-  const arr = a.split("")
-  return arr.some(ele => {
-    return arr.filter(harf => harf === ele).length > 1
-  })
+// function findDoublers(a=string) {
+//   const arr = a.split("")
+//   return arr.some(ele => {
+//     return arr.filter(harf => harf === ele).length > 1
+//   })
+// }
+
+// console.log(findDoublers("hello")) // true qaytaradi 
+
+
+// G task 
+
+function getHighestIndex(arr) {
+    let maxValue = arr[0];
+    let maxIndex = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > maxValue) {
+            maxValue = arr[i];
+            maxIndex = i;
+        }
+    }
+
+    return maxIndex;
 }
 
-console.log(findDoublers("hello")) // true qaytaradi 
+const result = getHighestIndex([5, 21, 12, 21, 8]);
+console.log(result);  
 
