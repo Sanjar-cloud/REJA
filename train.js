@@ -266,16 +266,51 @@
 // const result = getHighestIndex([5, 21, 12, 21, 8]);
 // console.log(result);  
 
-function getPositive(arr) {
-    let result = "";
 
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] > 0) {
-            result += String(arr[i]);
-        }
+// H-task
+
+// function getPositive(arr) {
+//     let result = "";
+
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] > 0) {
+//             result += String(arr[i]);
+//         }
+//     }
+
+//     return result;
+// }
+
+// console.log(getPositive([1, -4, 2]));  // 12
+
+
+//I-task 
+
+function majorityElement(arr) {
+  let count = {};
+
+  //  raqamni sanaymiz
+  arr.forEach(function(num) {
+    if (count[num]) {
+      count[num] = count[num] + 1;
+    } else {
+      count[num] = 1;
     }
+  });
 
-    return result;
+  // kop takrorlangani topamiz
+  let maxNum = arr[0];
+  let maxCount = 0;
+
+  for (let num in count) {
+    if (count[num] > maxCount) {
+      maxCount = count[num];
+      maxNum = num;
+    }
+  }
+
+  return Number(maxNum);
 }
 
-console.log(getPositive([1, -4, 2]));  // 12
+console.log(majorityElement([1, 2, 3, 3, 5, 4, 3, 3])); //3 return qilafi 
+
