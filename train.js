@@ -286,31 +286,57 @@
 
 //I-task 
 
-function majorityElement(arr) {
-  let count = {};
+// function majorityElement(arr) {
+//   let count = {};
 
-  //  raqamni sanaymiz
-  arr.forEach(function(num) {
-    if (count[num]) {
-      count[num] = count[num] + 1;
-    } else {
-      count[num] = 1;
-    }
-  });
+//   //  raqamni sanaymiz
+//   arr.forEach(function(num) {
+//     if (count[num]) {
+//       count[num] = count[num] + 1;
+//     } else {
+//       count[num] = 1;
+//     }
+//   });
 
-  // kop takrorlangani topamiz
-  let maxNum = arr[0];
-  let maxCount = 0;
+//   // kop takrorlangani topamiz
+//   let maxNum = arr[0];
+//   let maxCount = 0;
 
-  for (let num in count) {
-    if (count[num] > maxCount) {
-      maxCount = count[num];
-      maxNum = num;
+//   for (let num in count) {
+//     if (count[num] > maxCount) {
+//       maxCount = count[num];
+//       maxNum = num;
+//     }
+//   }
+
+//   return Number(maxNum);
+// }
+
+// console.log(majorityElement([1, 2, 3, 3, 5, 4, 3, 3])); //3 return qilafi 
+
+
+//J-task
+
+function findLongestWord(str) {
+  
+  // split qilib olamuz
+  let words = str.split(" ");
+ 
+
+  // eng uzun sozni topaman
+  let longest = "";
+
+  // check qiladi xar wordni 
+  for (let word of words) {
+    if (word.length > longest.length) {
+      longest = word;
     }
   }
 
-  return Number(maxNum);
+  // keyin javobni qaytaradi
+  return longest;
 }
 
-console.log(majorityElement([1, 2, 3, 3, 5, 4, 3, 3])); //3 return qilafi 
 
+let result = findLongestWord("i'm learning python");
+console.log(result);
