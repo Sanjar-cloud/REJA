@@ -317,26 +317,51 @@
 
 //J-task
 
-function findLongestWord(str) {
+// function findLongestWord(str) {
   
-  // split qilib olamuz
-  let words = str.split(" ");
+//   // split qilib olamuz
+//   let words = str.split(" ");
  
 
-  // eng uzun sozni topaman
-  let longest = "";
+//   // eng uzun sozni topaman
+//   let longest = "";
 
-  // check qiladi xar wordni 
-  for (let word of words) {
-    if (word.length > longest.length) {
-      longest = word;
+//   // check qiladi xar wordni 
+//   for (let word of words) {
+//     if (word.length > longest.length) {
+//       longest = word;
+//     }
+//   }
+
+//   // keyin javobni qaytaradi
+//   return longest;
+// }
+
+
+// let result = findLongestWord("i'm learning python");
+// console.log(result);
+
+
+
+function countVowels(str) {
+
+  //  Unli harflar
+  let vowels = ["a", "e", "i", "o", "u"];
+
+  //  noldan boshlaymiz
+  let count = 0;
+
+  // tekshirish qismi
+  for (let letter of str) {
+    if (vowels.includes(letter.toLowerCase())) {
+      count = count + 1;
     }
   }
 
-  // keyin javobni qaytaradi
-  return longest;
+  // va return qilish javobni
+  return count;
 }
 
 
-let result = findLongestWord("i'm learning python");
-console.log(result);
+console.log(countVowels("uzbekistan")); 
+
